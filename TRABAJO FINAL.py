@@ -1,8 +1,8 @@
 
-# Creación de Aplicaciones básicas en Python
+# Creacion de Aplicaciones basicas en Python
 from tkinter import *
 
-root = tk()
+root = Tk()
 root.title("FERRETERIA EL TORNILLO FELIZ")
 
 miframe = Frame(root)
@@ -38,7 +38,7 @@ tNombre.grid(row=1, column=3, pady=5, padx=5)
             # etiqueta direccion 
 
 obtenerDir=StringVar()
-lDireccion = Label(miframe, text='Dirección:')
+lDireccion = Label(miframe, text='Direccion:')
 lDireccion.grid(row=2, column=0, sticky='e', pady=5, padx=5)
 tDireccion = Entry(miframe,textvariable=obtenerDir)
 tDireccion.grid(row=2, column=1, columnspan=3, sticky='we',pady=5, padx=5)
@@ -73,7 +73,7 @@ tCodigo3.grid(row=7, column=0, pady=5, padx=5)
             # etiqueta descripcion 
 
 
-lDes = Label(miFrame1, text='Descripción')
+lDes = Label(miFrame1, text='Descripcion')
 lDes.grid(row=4, column=1,sticky='ew', pady=5, padx=5)
 tDes1 = Entry(miFrame1, width=7, state="readonly")
 tDes1.grid(row=5, column=1, pady=5, padx=5)
@@ -109,7 +109,7 @@ tCantidad3.grid(row=7, column=3, pady=5, padx=5)
 
                  # eriqueta  Precio 
 
-                 
+
 lPrecio = Label(miFrame1, text='Precio')
 lPrecio.grid(row=4, column=4,sticky='ew', pady=5, padx=5)
 tPrecio1 = Entry(miFrame1, width=7, state="readonly")
@@ -118,3 +118,28 @@ tPrecio2 = Entry(miFrame1, width=7, state="readonly")
 tPrecio2.grid(row=6, column=4, pady=5, padx=5)
 tPrecio3 = Entry(miFrame1, width=7, state="readonly")
 tPrecio3.grid(row=7, column=4, pady=5, padx=5)
+
+                #etiqueta   Subtotal 
+                
+lSubtotal = Label(miFrame1, text='Subtotal')                
+lSubtotal.grid(row=4, column=5,sticky='ew', pady=5, padx=5)
+tSubtotal1 = Entry(miFrame1, width=7, state="readonly")
+tSubtotal1.grid(row=5, column=5, pady=5, padx=5)
+tSubtotal2 = Entry(miFrame1, width=7, state="readonly")
+tSubtotal2.grid(row=6, column=5, pady=5, padx=5)
+tSubtotal3 = Entry(miFrame1, width=7, state="readonly")
+tSubtotal3.grid(row=7, column=5, pady=5, padx=5)
+
+
+                 # etiqueta  Total 
+lTotal = Label(miFrame1, text='Total')
+lTotal.grid(row=7, column=6,sticky='ew', pady=5, padx=5)
+tTotal = Entry(miFrame1, width=7, state="readonly")
+tTotal.grid(row=7, column=7, pady=5, padx=5)
+
+
+                # Boton guardar 
+guardar=Button(miFrame1, text='Guardar')
+guardar.grid(row=8, column=3, pady=5, padx=5)
+ 
+root.mainloop()
